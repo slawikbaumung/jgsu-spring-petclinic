@@ -40,12 +40,12 @@ class ValidatorTests {
 		return localValidatorFactoryBean;
 	}
 
-	@Test
+	@Tests
 	void shouldNotValidateWhenFirstNameEmpty() {
 
 		LocaleContextHolder.setLocale(Locale.ENGLISH);
 		Person person = new Person();
-		person.setFirstName("");
+		person.setFirstName("notempty");
 		person.setLastName("smith");
 
 		Validator validator = createValidator();
